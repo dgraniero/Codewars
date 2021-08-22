@@ -1,0 +1,15 @@
+#Bouncing balls example from codewars 
+#https://www.codewars.com/kata/5544c7a5cb454edb3c000047/train/python
+
+def bouncing_ball(h, bounce, window):
+    passes = 0
+    if h > 0:
+        if bounce > 0 and bounce < 1:
+            while window < h:
+                passes = passes + 2
+                h = (h*bounce)
+            passes = passes - 1
+            print (passes)
+            return passes
+        else: return -1
+    else: return -1

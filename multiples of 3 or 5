@@ -1,0 +1,50 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Aug 22 18:50:45 2021
+
+@author: d2rea
+"""
+
+# multiples of 3 or 5
+# https://www.codewars.com/kata/514b92a657cdc65150000006
+#Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in
+
+def sum_Multiples(n):
+    if n <= 0:
+        return 0
+    else:
+        m = n-1
+        multiples = []
+        duplicates = []
+        while m > 0:
+            #test for multiple of 3 - add to matrix
+            print m
+            if m % 3 == 0:   
+               multiples.append(m)
+            #test for multiple of 5 - add to matrix
+            if (m % 5) == 0:
+               multiples.append(m)
+            m = m - 1
+            if m%15 == 0:
+                duplicates.append(m)
+    #remove duplicate multiples
+ 
+    
+    print multiples
+    print duplicates  
+    #sum all multiples
+    
+    sum2 = 0
+    sum1 = 0
+    
+    for i in multiples:
+        sum2 = sum2 + 1
+        
+    for j in duplicates:
+        sum1 = sum1 + 1
+    
+    sum2 = sum2 - sum1
+    
+    print (sum2)
+    
+sum_Multiples(50)
